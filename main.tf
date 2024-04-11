@@ -3,7 +3,7 @@ data "aws_ami" "app_ami" {
 
   filter {
     name   = "name"
-    values = [var.aim_filter.name]
+    values = [var.ami_filter.name]
   }
 
   filter {
@@ -11,7 +11,7 @@ data "aws_ami" "app_ami" {
     values = ["hvm"]
   }
 
-  owners = [var.aim_filter.owner]
+  owners = [var.ami_filter.owner]
 }
 
 data "aws_vpc" "default" {
